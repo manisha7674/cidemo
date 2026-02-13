@@ -1,0 +1,17 @@
+name: Task 3 - Workspace Demo
+
+on: [push]
+
+jobs:
+  workspace-demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Create a text file
+        run: echo "Hello from Manisha RB!" > file.txt
+
+      - name: Display file contents
+        run: cat file.txt
